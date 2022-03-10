@@ -11,6 +11,8 @@ java -jar ./dimerconstr.run -help
 ```
 # Input file structure
 
+Preferred way to produce correct input is to use [hbondsgen](https://github.com/s4rduk4r/hbondsgen)
+
 Example input file is here - https://github.com/s4rduk4r/dimerconstr/blob/main/example_input.txt
 
 >Input file consists of commentary lines and 3 sections: `TITLE`, `GEOMETRY`, `BONDS`<br>
