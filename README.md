@@ -32,7 +32,7 @@ Example input file is here - https://github.com/s4rduk4r/dimerconstr/blob/main/e
 >If atom is acceptor - then it must be marked by 'A' or 'a' character. If atom is neither donor or acceptor - then no marker is needed<br>
 >	`P` - molecule plane atom. If atom marked with 'P' or 'p' character, then it is considered as belonging to molecule plane.
 >
-> `BONDS` section consists of H-bonds pairs in format: `IMN1`:`IMN2` `IMN3`:`IMN4`<br>
+> `BONDS` section consists of H-bonds pairs in format: `IMN1:IMN2 IMN3:IMN4`<br>
 >where	`IMN1` and `IMN3` are 1st monomer's atoms.<br>
 >	`IMN2` and `IMN4` are 2nd monomer's atoms.
 
