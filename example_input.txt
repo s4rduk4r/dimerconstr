@@ -1,0 +1,49 @@
+# Example of input file for dimerconstr utility
+# ---------------------------------------------
+# This file can contain any number of commentary strings like this one
+# Any string beginning by '#' character automatically considered as commentary
+# ---------------------------------------------
+# First section is a job title section.
+# It consists of any except special characters. It terminates by an empty string
+#
+JOB TITLE. EXAMPLE CYT-H2O COMPLEX. 28.06.2012
+
+#
+# Second section is a geometry section.
+# It consists of monomer names followed by their atom descriptions. It terminates by an empty string
+# Atom description has specific format:
+# IMN	X	Y	Z	DAM	P
+# where IMN - intramolecular name. E.g. N1, N3, H4-1, etc.
+#		X, Y, Z - atom coordinates in decard coordinate system
+#		DAM - donor-acceptor marker.	If atom is donor - then it must be marked by 'D' or 'd' character.
+#										If atom is acceptor - then it must be marked by 'A' or 'a' character.
+#										If atom is neither donor or acceptor - then no marker is needed
+#		P - molecule plane atom. If atom marked with 'P' or 'p' character, then it is considered as belonging to molecule plane.
+#
+cytosine
+N1	1.281552	0.894143	0.001740		A	P
+H1	2.221738	1.263048	0.003018		D
+C2	1.185758	-0.530673	0.000116
+O2	2.215338	-1.177590	0.000458		A
+N3	-0.081838	-1.048497	0.002145		A	P
+C4	-1.130143	-0.251582	-0.002077
+N4	-2.355573	-0.841929	-0.029536		A
+H4-2	-3.194712	-0.310272	0.123655	D
+H4-1	-2.390775	-1.844617	0.067953	D
+C5	-1.047631	1.185700	-0.001054			P
+H5	-1.925437	1.815539	-0.009193		D
+C6	0.202482	1.712032	0.001150
+H6	0.394704	2.778143	0.001655		D
+water
+O1	0.000000	0.000000	0.117057		A	P
+H1-1	0.000000	0.763564	-0.468227	D	P
+H1-2	0.000000	-0.763564	-0.468227	D	P
+
+#
+# Third section is a potential H-bonds section.
+# It consists of H-bonds pairs in format: IMN1:IMN2 IMN3:IMN4, 
+# where IMN1 and IMN3 are 1st monomer's atoms. IMN2 and IMN4 are 2nd monomer's atoms.
+# It terminates by an empty string
+#
+N3:H1-1 N4:H1-2
+
